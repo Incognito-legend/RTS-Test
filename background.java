@@ -34,9 +34,12 @@ public class background extends World
         
         {
             
+            addObject(new Player_(), 200, 300);
+            addObject(new Objects(), 0, 0);
+            addObject(new Castles(), 0, 0);
+            World_Start = true;
         
-        
-        
+            
         
         
         
@@ -59,9 +62,6 @@ public class background extends World
         else if (World_Start)
         
         {
-            
-            addObject(new Player_(), 200, 300);
-            addObject(new Objects(), 0, 0);
             
         }
         
@@ -115,6 +115,7 @@ public class background extends World
                if (castle_df){
                System.out.println("Construction Commencing for Town hall Tier " + town_hall);
                castle_df = false;
+               Ci = true;
             }
         }
            if ((Ci) && (town_hall == 0)){
