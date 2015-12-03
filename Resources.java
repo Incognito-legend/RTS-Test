@@ -8,12 +8,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Resources extends Objects
 {
-    /**
-     * Act - do whatever the Resources wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    int Water;
+    int Gold;
+    int Wood;
+    int Souls;
+    int Stone;
+    int Food;
+    boolean Resources_Initialization = false;
+    boolean Initialization_Completion = false; 
     public void act() 
     {
-        // Add your action code here.
+        background level = (background)this.getWorld();
+        if (level.Game_Start){
+        if (Resources_Initialization){
     }    
+}
+}
 }

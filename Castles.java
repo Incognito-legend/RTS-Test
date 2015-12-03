@@ -8,12 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Castles extends Buildings
 {
-    /**
-     * Act - do whatever the Castles wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    int tier;
+    boolean tdf = false;
     public void act() 
     {
-        // Add your action code here.
+        background Townhall = (background)this.getWorld();
+        if (!(tdf)){
+        tier = 0;
+        Townhall.town_hall(tier);
+        tdf = true;
+    }
+        
     }    
 }
