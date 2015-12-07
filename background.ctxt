@@ -2,6 +2,8 @@
 comment0.target=background
 comment1.params=
 comment1.target=background()
-comment2.params=TIDn
-comment2.target=int\ TileID(int)
-numComments=3
+comment2.params=tileID
+comment2.target=boolean\ tileGen(boolean)
+comment3.params=tni
+comment3.target=int\ tileNumID(int)
+numComments=4
