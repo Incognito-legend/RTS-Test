@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.Date;
+import java.util.List;
 public class background extends World
 {
 //     GreenfootImage final_Map = new GreenfootImage("Template.png");
 boolean df = false;
-int x;
-int y;
     public background()
     {    
        
@@ -29,8 +29,8 @@ int y;
     {
         if ((tileID) && (!(df))){System.out.println("StartupProcess = " + Map_Tiles.StartupProcess); df = true;}
         else if ((!(tileID)) && (df)) { System.out.println("StartupProcess = " + Map_Tiles.StartupProcess);}
-        if (tileID) {Map_Tiles.getRandomNumberRange(x, y);
-        }
+        //if (tileID) {Map_Tiles.getRandomNumberRange(x, y);
+        //}
         return tileID; 
     }
     public int tileNumID(int tni)
@@ -55,6 +55,33 @@ int y;
         }
         return tni;
 }
+public int setZ(int x, int y, int z)
+{
+    System.out.println("Return.Parameter.x." + x + "_Return.Parameter.y." + y);
+    return 0;
+    
+}
+public int building_type(int rbt)
+{
+    if (rbt == 1){
+        System.out.println("Return.Building.Type.Town_Hall.Spawn_Count_1");
+    }
+    else if (rbt == 2){
+        System.out.println("Return.Building.Type.Farm.Spawn_Count_1");
+        
+    }
+    else if (rbt == 3){
+        System.out.println("Return.Building.Type.Farm.Spawn_Count_2");
+    }
+    else if (rbt == 4){
+        System.out.println("Return.Building.Type.Farm.Spawn_Count_3");
+    }
+    else if (rbt == 5){
+        System.out.println("Return.Building.Type.Lumbermill.Spawn_Count_1");
+    }
+    return 0;
+}
+
 }
 //             //drawImage(GreenfootImage, int x, int y)
 //             addObject(new Resources(), 0, 0);

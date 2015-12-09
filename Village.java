@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TH_T2_tile2 here.
+ * Write a description of class Village here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TH_T2_tile2 extends TH_T2
+public class Village extends Map_Tiles
 {
     /**
-     * Act - do whatever the TH_T2_tile2 wants to do. This method is called whenever
+     * Act - do whatever the Village wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TH_T2_tile6 here.
+ * Write a description of class Lumbermill here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TH_T2_tile6 extends TH_T2
+public class Lumbermill extends Map_Tiles
 {
     /**
-     * Act - do whatever the TH_T2_tile6 wants to do. This method is called whenever
+     * Act - do whatever the Lumbermill wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
