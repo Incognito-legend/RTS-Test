@@ -1,6 +1,12 @@
 #BlueJ class context
 comment0.target=Random_Map_Generator
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Random_Map_Generator\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ act()
-numComments=2
+comment1.params=x\ y
+comment1.target=int\ getTileAt(int,\ int)
+comment2.params=
+comment2.target=void\ map_param()
+comment3.params=
+comment3.target=int[]\ return_Array()
+comment4.params=
+comment4.target=void\ act()
+numComments=5

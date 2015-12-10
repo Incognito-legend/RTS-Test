@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.Date;
-import java.util.List;
+//import java.util.Date;
+//import java.util.List;
 public class background extends World
 {
 //     GreenfootImage final_Map = new GreenfootImage("Template.png");
@@ -11,7 +11,7 @@ boolean df = false;
         
         // original map parameters
         super(1264, 624, 1);
-        GreenfootImage backgroundImg = new GreenfootImage("Template.png");
+        //GreenfootImage backgroundImg = new GreenfootImage("Template.png");
         
         // width of map = 1264
         
@@ -22,9 +22,12 @@ boolean df = false;
         // height of map (in tiles) = 39 tiles
         
         // individual tiles = 16px * 16px
-        addObject(new Map_Tiles(), 632, 312);
-        addObject(new Random_Map_Generator(), 632,312);
+        addObject(new Map_Tiles(), 0, 0);
+        addObject(new Random_Map_Generator(), 0, 0);
     }
+    
+
+    
     public boolean tileGen(boolean tileID)
     {
         if ((tileID) && (!(df))){System.out.println("StartupProcess = " + Map_Tiles.StartupProcess); df = true;}
