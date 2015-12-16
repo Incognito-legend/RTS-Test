@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Map_Tiles extends Actor
 {
-    String baseString = " ";
+    String baseString = "";
     String RGTileType;
     String RGBTileType;
     String TH_T1;

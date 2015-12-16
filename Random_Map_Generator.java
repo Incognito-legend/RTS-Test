@@ -12,8 +12,11 @@ public class Random_Map_Generator extends Map_Tiles
     int rendered_farm_parameter_check = 0;
     int rendered_th_parameter_check = 0;
     int ocean = 0;
+    
+ 
     int forest = 0;
     int plain = 0;
+    int mountain = 0;
     int tile_type = 0;
     int w = 0;
     int h = 0;
@@ -38,6 +41,12 @@ public class Random_Map_Generator extends Map_Tiles
     int Building_Count = 1;
     int map_total_width = 79;//in tiles
     int wI = w * 16;
+    int ocean_counter = 0;
+    int ocean_check = 0;
+    int o = 0;
+    int oO = 0;
+    boolean ocean_patch = false;
+    boolean o_df = false;
         public int getTileAt(int x, int y){
         int i = x + wI * y;
         return map_parameters[i];
@@ -101,6 +110,9 @@ public class Random_Map_Generator extends Map_Tiles
          background Tile = (background)this.getWorld();
          if (Tile.tileGen(true))
       {
+          if (!(o_df)){
+              oO = getRandomNumberRange(1, 100);
+              o = getRandomNumberRange(1, oO);}
              if (tile_n <= 3278)
      {
              if (w <= 79)
@@ -132,6 +144,7 @@ public class Random_Map_Generator extends Map_Tiles
              }
             if (!((xZ < 1009) && (xZ > 255) && (yZ < 561) && (yZ > 63))){
                 Tile.addObject(new Mountain_Range_1_p1(), xZ, yZ);
+                mountain = mountain + 1;
                 tile_n = (tile_n + 1);
                 //                 MTIC = (MTIC + 1) % 7;
                 
@@ -171,7 +184,48 @@ public class Random_Map_Generator extends Map_Tiles
                    System.out.println("tile total: " + tile_n + " tile.plain.current." + plain);
                
                 }
-                                 
+//                if ((!(ocean_patch)) && (xZ <= 1008) && (xZ >= 256) && (yZ <= 560) && (yZ >= 64))
+//                {
+// //                    tile_type = 10;
+//                    if (ocean_counter == 0) {
+// //                        xZ = xZ;
+// //                        yZ = yZ;
+//                        Tile.addObject(new Ocean(), xZ, yZ);
+//                        ocean = ocean + 1;
+//                    
+//                        System.out.println("yZ: " + yZ + " xZ: " + xZ);
+//         } else if (ocean_counter == 1) {
+// //                        xZ = xZ + 16;
+// //                        yZ = yZ;
+//                        Tile.addObject(new Ocean(), xZ, yZ);
+//                        ocean = ocean + 1;
+//                    
+//                        System.out.println("yZ: " + yZ + " xZ: " + xZ);
+//         } else if (ocean_counter == 2) {
+// //                        xZ = xZ + 16;
+// //                        yZ = yZ;
+//                        Tile.addObject(new Ocean(), xZ, yZ);
+//                        ocean = ocean + 1;
+//                    
+//                        System.out.println("yZ: " + yZ + " xZ: " + xZ);
+//         } else if (ocean_counter == 3) {
+// //                        xZ = xZ - 32;
+// //                        yZ = yZ;
+//                        Tile.addObject(new Ocean(), xZ, yZ);
+//                        ocean = ocean + 1;
+//                   
+//                        System.out.println("yZ: " + yZ + " xZ: " + xZ);
+//                        ocean_check = ocean_check + 1;
+//         }
+//         ocean_counter = (ocean_counter + 1) % 4;
+//                    //Tile.addObject(new Ship_Object(), xZ, yZ);
+//                 
+//                    System.out.println("tile total: " + tile_n + " tile.ocean.current." + ocean);
+//                    
+//                    if (ocean_check == o * 100){ ocean_patch = true; }
+//                    
+//     }
+     
      }
      
      else if (tile_n > 3278)
@@ -226,7 +280,7 @@ public class Random_Map_Generator extends Map_Tiles
             
         }
         
-    }
+     }
     
         if ((tile_type == 6) && (!(Lumbermill_df)) && (xZ <= 1008) && (xZ >= 256) && (yZ <= 560) && (yZ >= 64))
     
@@ -244,7 +298,7 @@ public class Random_Map_Generator extends Map_Tiles
             Lumbermill_df = true; 
         }
     
-    }    
+     }    
         if ((tile_type == 7) && (Lumbermill_df) && (Farm_df) && (xZ <= 1008) && (xZ >= 256) && (yZ <= 560) && (yZ >= 64))
         
         {
@@ -266,19 +320,20 @@ public class Random_Map_Generator extends Map_Tiles
             System.out.println("Restarting System.Render.Town_Hall...");
             System_RPTH_failed_Check = true;
         } 
-    } 
+     } 
     if ((dfT) && (!(System_Render_Complete))) { 
         System.out.println("System.Render.Player.Town_Hall.Finished");
         //return_Array();
+        System.out.println("System.Render.Player.Ship.Initializing");
+        Tile.addObject(new Concept_Art(), 632, 312); 
         System_Render_Complete = true;
-    
     }
 
 }
 }
 }
 }
-
+//Greenfoot.setWorld(new Concept_Art()); <----- this is used to change the world entirely;
 // public static void main(String[] args) {
 //     int[] series = new int[0];
 //     int x = 5;

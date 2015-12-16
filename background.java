@@ -22,6 +22,7 @@ boolean df = false;
         // height of map (in tiles) = 39 tiles
         
         // individual tiles = 16px * 16px
+        
         addObject(new Map_Tiles(), 0, 0);
         addObject(new Random_Map_Generator(), 0, 0);
     }
@@ -82,6 +83,14 @@ public int building_type(int rbt)
     else if (rbt == 5){
         System.out.println("Return.Building.Type.Lumbermill.Spawn_Count_1");
     }
+    return 0;
+}
+public void setTransparency(int t){
+}
+    // if t = 255, image is at full visibility
+    // if t = 0, image is invisible
+
+public int getTransparency(){
     return 0;
 }
 
