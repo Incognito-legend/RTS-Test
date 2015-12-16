@@ -46,7 +46,7 @@ int t = 0;
             if (!(Slide_1)){
                 
             if (t < 255){
-            setImage(Slide1);
+            setImage(Slide7);
             t = (t+1);
             getImage().setTransparency(t);
         }
@@ -56,6 +56,7 @@ int t = 0;
        drawString(Slide1_Text, 632, 412);
             if (Greenfoot.isKeyDown("Space"))
         {
+            System.out.println("Slide_1 =" + Slide_1);
            Slide_1 = true;
            //Story_Transition = false;
        }

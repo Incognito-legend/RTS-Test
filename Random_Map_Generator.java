@@ -325,7 +325,8 @@ public class Random_Map_Generator extends Map_Tiles
         System.out.println("System.Render.Player.Town_Hall.Finished");
         //return_Array();
         System.out.println("System.Render.Player.Ship.Initializing");
-        Tile.addObject(new Concept_Art(), 632, 312); 
+        Tile.addObject(new Background_(), 632, 312);
+        Tile.addObject(new Concept_Art(), 632, 312);
         System_Render_Complete = true;
     }
 
