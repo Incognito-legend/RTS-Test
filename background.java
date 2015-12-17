@@ -5,6 +5,8 @@ public class background extends World
 {
 //     GreenfootImage final_Map = new GreenfootImage("Template.png");
 boolean df = false;
+String Slide1_Text = "You've Entered the 1st Age!";
+
     public background()
     {    
        
@@ -25,8 +27,17 @@ boolean df = false;
         
         addObject(new Map_Tiles(), 0, 0);
         addObject(new Random_Map_Generator(), 0, 0);
+        //addObject(new Slide_1_String_Text(Slide1_Text), 632, 312);
+        
     }
-    
+    public boolean setStringText(boolean S)
+    {
+        if (!(S)){
+            addObject(new Slide_1_String_Text(Slide1_Text), 632, 312);
+            S = true;
+    }
+    return S;
+}
 
     
     public boolean tileGen(boolean tileID)

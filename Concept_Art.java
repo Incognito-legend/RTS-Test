@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class Concept_Art here.
  * 
@@ -22,8 +21,6 @@ boolean Slide_8 = true;
 boolean Slide_9 = true;
 boolean Slide_10 = true;
 int t = 0;
-
-    String baseString = "";
     String Slide1 = "Yavanna and her Maiar.jpg";
     String Slide2 = "The Maiar.jpg";
     String Slide3 = "No-one Can Match My Strength.jpg";
@@ -36,35 +33,46 @@ int t = 0;
     String Slide10 = "Sauron the Deceiver.jpg";
     
     // text strings
-    String Slide1_Text = "You've Entered the 1st Age!";
     
     public void act()
     {    
-    
+        background SI = (background)this.getWorld();
         if (Story_Transition){
             
             if (!(Slide_1)){
                 
             if (t < 255){
-            setImage(Slide7);
+            
             t = (t+1);
             getImage().setTransparency(t);
         }
         
         if (t == 255)
         {
-       drawString(Slide1_Text, 632, 412);
+        
             if (Greenfoot.isKeyDown("Space"))
         {
             System.out.println("Slide_1 =" + Slide_1);
-           Slide_1 = true;
+            
+            Slide_1 = true;
+           
            //Story_Transition = false;
        }
         
      }
     
    
-   }
+   } else if (Slide_1){
+       if (t > 0){
+       setImage(Slide_7);
+       t = (t-1);
+       getImage().setTransparency(t);
+       
+      }
+      if (t == 0){
+          Story_Transition = false;
+  }
+}
 }
 }
 public void setTransparency(int t){
@@ -75,6 +83,5 @@ public void setTransparency(int t){
 public int getTransparency(){
     return 0;
 }
-public void drawString(java.lang.String string, int x, int y){
-}
+
 }

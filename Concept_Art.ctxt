@@ -7,6 +7,4 @@ comment2.params=t
 comment2.target=void\ setTransparency(int)
 comment3.params=
 comment3.target=int\ getTransparency()
-comment4.params=string\ x\ y
-comment4.target=void\ drawString(java.lang.String,\ int,\ int)
-numComments=5
+numComments=4
