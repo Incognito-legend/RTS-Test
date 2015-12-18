@@ -5,7 +5,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Background_ extends Actor
+public class Background_ extends Concept_Art
 {
 boolean Story_Transition = true;
 boolean Check = false;
@@ -14,7 +14,7 @@ String bg_ = "Background.png";
 
     public void act() 
     {
-          background string = (background)this.getWorld();
+          
         if (Story_Transition){
             
             if (!(Check)){

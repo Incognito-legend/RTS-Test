@@ -6,6 +6,8 @@ public class background extends World
 //     GreenfootImage final_Map = new GreenfootImage("Template.png");
 boolean df = false;
 String Slide1_Text = "You've Entered the 1st Age!";
+String Slide1_transparent_text = " ";
+int Slide_check_instance = 0;
 
     public background()
     {    
@@ -30,16 +32,120 @@ String Slide1_Text = "You've Entered the 1st Age!";
         //addObject(new Slide_1_String_Text(Slide1_Text), 632, 312);
         
     }
+    
     public boolean setStringText(boolean S)
     {
         if (!(S)){
-            addObject(new Slide_1_String_Text(Slide1_Text), 632, 612);
-            S = true;
+            if (Slide_check_instance == 0){
+            addObject(new Slide_1_String_Text(Slide1_Text), 632, 512);
+            S = true; Slide_check_instance = 1; System.out.println("sci = " + Slide_check_instance);
+            
     }
+            if (Slide_check_instance == 1){
+            //clear();
+            //addObject(new Slide_1_String_Text(Slide1_transparent_text), 632, 512);
+            //Slide_1_String_Text.x(0);
+            S = true; Slide_check_instance = 2; System.out.println("sci = " + Slide_check_instance);
+            
+    }
+}
     return S;
 }
-
+void clear(){}
+    //public int Player_Stats_(int Player_Stamina_, int Player_Strength_, int Player_Mana_, int Player_
+public int Player_Stats_(int Affinity_, int Aid_, int Attack_Speed_, int Constitution_, int Defense_, int Hp_, int Leadership_, int Level_, int Luck_, int Magic_, int Maximum_Hp_, int Movement_, int Movement_Star_, int Pursuit_Critical_Coefficient_, int Relative_Power_, int Resistance_, int Skill_, int Speed_, int Strength_, int Weapon_Level_, int Weapon_Rank_, int Weight_)
+    {
+        
+    return 0;
+    }
     
+    //System.out.println("Affinity: " + Affinity_);
+    
+    
+    
+    //System.out.println("Aid: " + Aid_);
+    
+    
+    
+    //System.out.println("Attack Speed: " + Attack_Speed_);
+    
+    
+    
+    //System.out.println("Constitution: " + Constitution_);
+    
+    
+    
+    //System.out.println("Defense: " + Defense_);
+    
+    
+    
+    //System.out.println("Hp: " + Hp_);
+    
+    
+    
+    //System.out.println("Leadership: " + Leadership_);
+    
+    
+    
+    //System.out.println("Level: " + Level_);
+    
+    
+    
+    //System.out.println("Luck: " + Luck_);
+    
+    
+    
+    //System.out.println("Magic: " + Magic_);
+    
+    
+    
+    //System.out.println("Maximum Hp: " + Maximum_Hp_);
+    
+    
+    
+    //System.out.println("Movement: " + Movement_);
+    
+    
+    
+    //System.out.println("Movement_Star: " + Movement_Star_);
+    
+    
+    
+    //System.out.println("PCC: " + Pursuit_Critical_Coefficient_);
+    
+    
+    
+    //System.out.println("RP: " + Relative_Power_);
+    
+    
+    
+    //System.out.println("Resistance: " + Resistance_);
+    
+    
+    
+    //System.out.println("Skill: " + Skill_);
+    
+    
+    
+    //System.out.println("Speed: " + Speed_);
+    
+    
+    
+    //System.out.println("Strength: " + Strength_);
+    
+    
+    
+    //System.out.println("Weapon Level: " + Weapon_Level_);
+    
+    
+    
+    //System.out.println("Weapon Rank: " + Weapon_Rank_);
+    
+    
+    
+    //System.out.println("Weight: " + Weight_);
+    
+    //Initialization = false;
     public boolean tileGen(boolean tileID)
     {
         if ((tileID) && (!(df))){System.out.println("StartupProcess = " + Map_Tiles.StartupProcess); df = true;}
@@ -176,3 +282,4 @@ public int getTransparency(){
 
 
 
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

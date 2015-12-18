@@ -46,11 +46,16 @@ int t = 0;
             setImage(Slide7);
             t = (t+1);
             getImage().setTransparency(t);
+            
         }
         
         if (t == 255)
         {
-       if (Slide_text == 0){ SI.setStringText(false); }
+       if (Slide_text == 0)
+       { 
+           SI.setStringText(false);
+           Slide_text = 1;
+        }
             if (Greenfoot.isKeyDown("Space"))
         {
             System.out.println("Slide_1 =" + Slide_1);
