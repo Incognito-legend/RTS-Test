@@ -33,7 +33,7 @@ String Slide1_Text = "You've Entered the 1st Age!";
     public boolean setStringText(boolean S)
     {
         if (!(S)){
-            addObject(new Slide_1_String_Text(Slide1_Text), 632, 312);
+            addObject(new Slide_1_String_Text(Slide1_Text), 632, 612);
             S = true;
     }
     return S;

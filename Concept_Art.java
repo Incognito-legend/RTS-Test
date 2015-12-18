@@ -10,6 +10,7 @@ public class Concept_Art extends Actor
 
 boolean Story_Transition = true;
 boolean Slide_1 = false;
+int Slide_text = 0;
 
 boolean Slide_2 = true;
 boolean Slide_3 = true;
@@ -42,14 +43,14 @@ int t = 0;
             if (!(Slide_1)){
                 
             if (t < 255){
-            
+            setImage(Slide7);
             t = (t+1);
             getImage().setTransparency(t);
         }
         
         if (t == 255)
         {
-        
+       if (Slide_text == 0){ SI.setStringText(false); }
             if (Greenfoot.isKeyDown("Space"))
         {
             System.out.println("Slide_1 =" + Slide_1);
@@ -64,7 +65,7 @@ int t = 0;
    
    } else if (Slide_1){
        if (t > 0){
-       setImage(Slide_7);
+       setImage(Slide7);
        t = (t-1);
        getImage().setTransparency(t);
        

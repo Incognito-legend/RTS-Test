@@ -5,4 +5,6 @@ comment1.params=text
 comment1.target=Slide_1_String_Text(java.lang.String)
 comment2.params=string\ x\ y
 comment2.target=void\ drawString(java.lang.String,\ int,\ int)
-numComments=3
+comment3.params=color
+comment3.target=void\ setColor(java.awt.Color)
+numComments=4

@@ -8,14 +8,20 @@ import java.awt.Color;
  */
 public class Slide_1_String_Text extends Actor
 {
+    boolean check = false;
     public Slide_1_String_Text(String text)  
     {  
         //GreenfootImage img = new GreenfootImage(text, 20, new Color(0, 0, 0), new Color(0, 0, 0, 0)); <--- black text color
-        GreenfootImage img = new GreenfootImage(text, 20, new Color(0, 0, 0), new Color(0, 0, 0, 0));
-        setImage(img);
+        if (!(check)){
+        GreenfootImage img = new GreenfootImage(text, 20, new Color(100, 100, 100), new Color(1, 1, 1, 1));
         
-        System.out.println("String Performed Task!");
+        setImage(img);
+        check = true;
+    }
+//         System.out.println("String Performed Task!");
 }
 public void drawString(java.lang.String string, int x, int y){
+}
+public void setColor(java.awt.Color color){
 }
 }
