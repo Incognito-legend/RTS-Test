@@ -4,10 +4,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class background extends World
 {
 //     GreenfootImage final_Map = new GreenfootImage("Template.png");
+        
 boolean df = false;
 String Slide1_Text = "You've Entered the 1st Age!";
 String Slide1_transparent_text = " ";
 int Slide_check_instance = 0;
+int pos_x = 1264;
+int pos_y = 624;
 
     public background()
     {    
@@ -29,9 +32,25 @@ int Slide_check_instance = 0;
         
         addObject(new Map_Tiles(), 0, 0);
         addObject(new Random_Map_Generator(), 0, 0);
+        GameTransition(true);
+        //addObject(new Player_Cursor_Images_(), 632, 312);
         //addObject(new Slide_1_String_Text(Slide1_Text), 632, 312);
         
     }
+    
+    public boolean GameTransition(boolean gt){
+        if (!(gt)){
+            addObject(new Player_Cursor_(), 632, 312);
+            
+            addObject(new Player_Cursor_Images_(), 632, 312);
+        } else {
+        
+        }
+        return gt;
+    }
+    
+    
+    
     
     public boolean setStringText(boolean S)
     {
@@ -51,7 +70,6 @@ int Slide_check_instance = 0;
 }
     return S;
 }
-void clear(){}
     //public int Player_Stats_(int Player_Stamina_, int Player_Strength_, int Player_Mana_, int Player_
 public int Player_Stats_(int Affinity_, int Aid_, int Attack_Speed_, int Constitution_, int Defense_, int Hp_, int Leadership_, int Level_, int Luck_, int Magic_, int Maximum_Hp_, int Movement_, int Movement_Star_, int Pursuit_Critical_Coefficient_, int Relative_Power_, int Resistance_, int Skill_, int Speed_, int Strength_, int Weapon_Level_, int Weapon_Rank_, int Weight_)
     {
@@ -210,7 +228,13 @@ public void setTransparency(int t){
 public int getTransparency(){
     return 0;
 }
-
+// public void setLocation(int x, int y){
+//     }
+// public void scroll(int dx, int dy){
+//        pos_x = pos_x + dx;
+//        pos_y += dy;
+//        
+// }
 }
 //             //drawImage(GreenfootImage, int x, int y)
 //             addObject(new Resources(), 0, 0);

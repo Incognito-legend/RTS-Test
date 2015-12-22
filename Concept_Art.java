@@ -1,10 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-/**
- * Write a description of class Concept_Art here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class Concept_Art extends Actor
 {
 
@@ -35,9 +30,11 @@ int t = 0;
     
     // text strings
     
+    
+     
     public void act()
     {    
-        background SI = (background)this.getWorld();
+        background level = (background)this.getWorld();
         if (Story_Transition){
             
             if (!(Slide_1)){
@@ -53,7 +50,7 @@ int t = 0;
         {
        if (Slide_text == 0)
        { 
-           SI.setStringText(false);
+           level.setStringText(false);
            Slide_text = 1;
         }
             if (Greenfoot.isKeyDown("Space"))
@@ -76,10 +73,16 @@ int t = 0;
        
       }
       if (t == 0){
+          //level.addObject(new Player_Cursor_Images_(), 632, 312);
+          level.GameTransition(false);
           Story_Transition = false;
   }
 }
-}
+
+} 
+    
+
+
 }
 public void setTransparency(int t){
 }
