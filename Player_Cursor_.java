@@ -9,11 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Player_Cursor_ extends Actor
 {
-     String c1;
-     String c2;
-     String c3;
-     String c4;
-     String c5;
+     String c1_;
+     String c2_;
+     String c3_;
+     String c4_;
+     String c5_;
      int counter = 1;
      int x = 632;
      int y = 312;
@@ -27,15 +27,15 @@ public class Player_Cursor_ extends Actor
     }
        if ((!(Greenfoot.isKeyDown("a"))) && (!(Greenfoot.isKeyDown("w"))) && (!(Greenfoot.isKeyDown("s"))) && (!(Greenfoot.isKeyDown("d")))){
        if(counter == 1) {
-           setImage(c1);
+           setImage(c1_);
         }      else if (counter == 250) {
-           setImage(c2);            
+           setImage(c2_);            
         }      else if (counter == 500) {
-           setImage(c3);
+           setImage(c3_);
         }      else if (counter == 750) {
-           setImage(c4);
+           setImage(c4_);
         }      else if (counter == 1000) {
-           setImage(c5);           
+           setImage(c5_);           
         }
         counter = (counter + 1) % 1250;
     }
