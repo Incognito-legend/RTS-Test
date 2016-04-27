@@ -14,7 +14,7 @@ public class Slide_1_String_Text extends Actor
     public Slide_1_String_Text(String text)  
     {  
         //GreenfootImage img = new GreenfootImage(text, 20, new Color(0, 0, 0), new Color(0, 0, 0, 0)); <--- black text color
-    
+    background level = (background)this.getWorld();
      if (Story_Transition)
      {
              if (!(check_))
@@ -40,7 +40,7 @@ public class Slide_1_String_Text extends Actor
         if (Greenfoot.isKeyDown("Space")){
             
             Story_Transition = false;
-            
+            level.removeObject(this);
         }
     }
 }
